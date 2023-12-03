@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="createNew_stage3.css">
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Schedule Evaluation</title>
+</head>
+
+<body>
+    <header>
+        <h1>Your Evaluation is Booked</h1>
+    </header>
+
+    <div class="status-bar">
+        <div class="status-circle"></div>
+        <div class="status-circle"></div>
+        <div class="status-circle active"></div>
+        <div class="status-circle"></div>
+    </div>
+
+    <div class="form-container">
+        <h2>Schedule Evaluation</h2>
+
+        <form id="schedule-form">
+            <label for="scheduleDate">Choose a Scheduling Date:</label>
+            <input type="date" id="scheduleDate" name="scheduleDate" required>
+
+            <button type="submit">Schedule</button>
+        </form>
+
+
+        <div class="info-section">
+            <h2>Preparation Tips</h2>
+            <div class="info-item">
+                <i class="fas fa-plug"></i>
+                <p>Make sure your utilities are on, including water, gas, and electricity.</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-tools"></i>
+                <p>Discontinue any incomplete renovations.</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-paw"></i>
+                <p>If you have pets, please secure them in a kennel or carrier.</p>
+            </div>
+        </div>
+        <button class="next-button" onclick="window.location.href='createNew_final.html'">Next</button>
+    </div>
+
+
+</body>
+
+</html>

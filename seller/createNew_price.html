@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="createNew_price.css">
+    <title>Prices and Terms</title>
+</head>
+
+<body>
+    <header>
+        <h1>Price and Terms</h1>
+    </header>
+
+    <div class="status-bar">
+        <div class="status-circle"></div>
+        <div class="status-circle active"></div>
+        <div class="status-circle"></div>
+        <div class="status-circle"></div>
+    </div>
+
+    <div class="form-container">
+        <h2>Enter Property Price Information</h2>
+
+        <form id="property-form">
+            <label for="propertyType">Property Type:</label>
+            <select id="propertyType" name="propertyType" required>
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+                <!-- Add more property types as needed -->
+            </select>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" placeholder="Enter price" required>
+
+            <label for="negotiable">Is the price negotiable?</label>
+            <input type="checkbox" id="negotiable" name="negotiable">
+
+            <label for="financingOptions">Special Financing Options:</label>
+            <input type="text" id="financingOptions" name="financingOptions" placeholder="Enter financing options">
+
+            <button type="submit" onclick="window.location.href='createNew_stage3.html'"">Submit</button>
+        </form>
+
+
+    </div>
+
+</body>
+</html>

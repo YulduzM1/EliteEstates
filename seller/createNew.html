@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="createNew.css">
+  <title>Create New Property</title>
+</head>
+<body>
+
+  <header>
+    <h1>Create New Property</h1>
+  </header>
+
+  <div class="status-bar">
+    <div class="status-circle active"></div>
+    <div class="status-circle"></div>
+    <div class="status-circle"></div>
+    <div class="status-circle"></div>
+  </div>
+
+  <div class="form-container">
+    <form id="property-form">
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required>
+
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age" required>
+
+      <label for="floorPlan">Floor Plan:</label>
+      <input type="text" id="floorPlan" name="floorPlan" required>
+
+      <label for="bedrooms">Number of Bedrooms:</label>
+      <input type="number" id="bedrooms" name="bedrooms" required>
+
+      <label for="additionalFacilities">Additional Facilities:</label>
+      <textarea id="additionalFacilities" name="additionalFacilities" rows="4"></textarea>
+
+      <label for="hasGarden">Presence of Garden:</label>
+      <select id="hasGarden" name="hasGarden">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="parkingAvailability">Parking Availability:</label>
+      <select id="parkingAvailability" name="parkingAvailability">
+        <option value="available">Available</option>
+        <option value="notAvailable">Not Available</option>
+      </select>
+
+      <label for="proximityToFacilities">Proximity to Nearby Facilities:</label>
+      <input type="text" id="proximityToFacilities" name="proximityToFacilities">
+
+      <label for="proximityToMainRoads">Proximity to Main Roads:</label>
+      <input type="text" id="proximityToMainRoads" name="proximityToMainRoads">
+
+      <label for="propertyTaxRecords">Property Tax Records:</label>
+      <input type="text" id="propertyTaxRecords" name="propertyTaxRecords">
+
+      <label for="photos">Upload Photos:</label>
+      <input type="file" id="photos" name="photos" accept="image/*" multiple>
+
+      <div class="photo-preview" id="photo-preview"></div>
+
+      <button type="button" onclick="previewPhotos()">Preview Photos</button>
+      <button type="submit" onclick="window.location.href='createNew_price.html'"">Create</button>
+    </form>
+  </div>
+
+  <script>
+    function previewPhotos() {
+      const photoInput = document.getElementById('photos');
+      const previewContainer = document.getElementById('photo-preview');
+      previewContainer.innerHTML = '';
+
+      const files = photoInput.files;
+      for (const file of files) {
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(file);
+        img.alt = file.name;
+        previewContainer.appendChild(img);
+      }
+    }
+  </script>
+
+</body>
+</html>
